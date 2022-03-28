@@ -1,0 +1,1490 @@
+{
+	"info": {
+		"_postman_id": "15a79dd8-033d-462a-93a5-da3090bba3b8",
+		"name": "WebAPIs UniAlfa",
+		"description": "**API usada em sala de aula**\n\nContact Support:  \nName: Er Galvão Abbott  \nEmail: [galvao@galvao.eti.br](mailto:galvao@galvao.eti.br)\n\n**Added Changes**\n\nName: Aline Hardt Silveira",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Acesso",
+			"item": [
+				{
+					"name": "get-acessos",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-id",
+								"value": "-88983821"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/acessos",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"acessos"
+							]
+						},
+						"description": "Lista os registros ou um registro apenas em caso da presença do cabeçalho x-id"
+					},
+					"response": [
+						{
+							"name": "200-get-acessos",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-id",
+										"value": "-88983821"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/acessos",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"acessos"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\r\n    \"data\": [\r\n        {\r\n            \"id\": 1,\r\n            \"token\": {{$randomUUID}}\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"token\": {{$randomUUID}}\r\n        }\r\n    ]\r\n}"
+						},
+						{
+							"name": "500-get-acessos",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-id",
+										"value": "-88983821"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/acessos",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"acessos"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\r\n    \"message\": \"Erro interno no servidor da aplicação\"\r\n}"
+						},
+						{
+							"name": "404-get-acessos",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-id",
+										"value": "-88983821"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/acessos",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"acessos"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\r\n    \"message\": \"Not Found\"\r\n}"
+						}
+					]
+				},
+				{
+					"name": "post-acesso",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-id",
+								"value": "-88983821"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": {{$randomUUID}}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/acesso",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"acesso"
+							]
+						},
+						"description": "Lista os registros ou um registro apenas em caso da presença do cabeçalho x-id"
+					},
+					"response": [
+						{
+							"name": "201-post-acesso",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-id",
+										"value": "-88983821"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"token\": {{$randomUUID}}\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/acesso",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"acesso"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\r\n    \"message\": \"Acesso cadastrado com sucesso!\"\r\n}"
+						},
+						{
+							"name": "417-post-acesso",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-id",
+										"value": "-88983821"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"tokenn\": {{$randomUUID}}\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/acesso",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"acesso"
+									]
+								}
+							},
+							"status": "Expectation Failed",
+							"code": 417,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\r\n    \"message\": \"Algum parâmetro está incorreto, verifique o body da requisição!\"\r\n}"
+						}
+					]
+				},
+				{
+					"name": "patch-acesso",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "x-id",
+								"value": "-88983821"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"asdasdasd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/acesso/:idacesso",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"acesso",
+								":idacesso"
+							],
+							"variable": [
+								{
+									"key": "idacesso",
+									"value": null
+								}
+							]
+						},
+						"description": "Lista os registros ou um registro apenas em caso da presença do cabeçalho x-id"
+					},
+					"response": [
+						{
+							"name": "200-patch-acesso",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "x-id",
+										"value": "-88983821"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"token\": {{$randomUUID}}\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/acesso/:idacesso",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"acesso",
+										":idacesso"
+									],
+									"variable": [
+										{
+											"key": "idacesso",
+											"value": null
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\r\n    \"message\": \"Alteração no acesso realizado com sucesso!\",\r\n    \"content\": {\r\n        \"data\": {\r\n            \"id\": 1,\r\n            \"token\": {{$randomUUID}}\r\n        }\r\n    }\r\n}"
+						}
+					]
+				},
+				{
+					"name": "delete-acesso",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-id",
+								"value": "-88983821"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/acesso/:idacesso",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"acesso",
+								":idacesso"
+							],
+							"variable": [
+								{
+									"key": "idacesso",
+									"value": null
+								}
+							]
+						},
+						"description": "Lista os registros ou um registro apenas em caso da presença do cabeçalho x-id"
+					},
+					"response": [
+						{
+							"name": "204-delete-acesso",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "x-id",
+										"value": "-88983821"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/acesso/:idacesso",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"acesso",
+										":idacesso"
+									],
+									"variable": [
+										{
+											"key": "idacesso",
+											"value": null
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\r\n    \"message\": \"Acesso deletado com sucesso!\"\r\n}"
+						}
+					]
+				},
+				{
+					"name": "get-acessos-by-id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-id",
+								"value": "-88983821"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/acesso/:idacesso",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"acesso",
+								":idacesso"
+							],
+							"variable": [
+								{
+									"key": "idacesso",
+									"value": null
+								}
+							]
+						},
+						"description": "Lista os registros ou um registro apenas em caso da presença do cabeçalho x-id"
+					},
+					"response": [
+						{
+							"name": "200-get-acesso-by-id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-id",
+										"value": "-88983821"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/acesso/:idacesso",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"acesso",
+										":idacesso"
+									],
+									"variable": [
+										{
+											"key": "idacesso",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\r\n\"data\":{\r\n        \"id\": 2,\r\n        \"token\": {{$randomUUID}}\r\n    }\r\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Produto",
+			"item": [
+				{
+					"name": "get-produtos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-id",
+								"value": "-88983821"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/produtos",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"produtos"
+							]
+						},
+						"description": "Lista os registros ou um registro apenas em caso da presença do cabeçalho x-id"
+					},
+					"response": [
+						{
+							"name": "200-get-produtos",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-id",
+										"value": "-88983821"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/produtos",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"produtos"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": "{\r\n    \"data\": [\r\n        {\r\n            \"id\": 1,\r\n            \"idcategoria\": 1,\r\n            \"nome\": \"Violão\",\r\n            \"preco\": 22\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"idcategoria\": 1,\r\n            \"nome\": \"Teclado\",\r\n            \"preco\": 109\r\n        }\r\n    ]\r\n}"
+						}
+					]
+				},
+				{
+					"name": "post-produto",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-id",
+								"value": "-88983821"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idcategoria\": 1,\r\n    \"nome\": \"Violão\",\r\n    \"preco\": 22\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/produto",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"produto"
+							]
+						},
+						"description": "Lista os registros ou um registro apenas em caso da presença do cabeçalho x-id"
+					},
+					"response": [
+						{
+							"name": "201-post-produto",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-id",
+										"value": "-88983821"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idcategoria\": 1,\r\n    \"nome\": \"Violão\",\r\n    \"preco\": 22\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/produto",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"produto"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Produto cadastrado com sucesso!\"\n}"
+						},
+						{
+							"name": "417-post-produto",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-id",
+										"value": "-88983821"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idcategoria\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/produto",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"produto"
+									]
+								}
+							},
+							"status": "Expectation Failed",
+							"code": 417,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\r\n    \"message\": \"Algum parâmetro está incorreto, verifique o body da requisição!\"\r\n}"
+						},
+						{
+							"name": "500-post-produto",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-id",
+										"value": "-88983821"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idcategoria\": 1,\r\n    \"nome\": \"Violão\",\r\n    \"preco\": 22\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/produto",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"produto"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\r\n    \"message\": \"Erro interno no servidor da aplicação\"\r\n}"
+						}
+					]
+				},
+				{
+					"name": "patch-produto",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "x-id",
+								"value": "-88983821"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idcategoria\": 1,\r\n    \"nome\": \"Violão\",\r\n    \"preco\": 22\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/produto/:idproduto",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"produto",
+								":idproduto"
+							],
+							"variable": [
+								{
+									"key": "idproduto",
+									"value": null
+								}
+							]
+						},
+						"description": "Lista os registros ou um registro apenas em caso da presença do cabeçalho x-id"
+					},
+					"response": [
+						{
+							"name": "200-patch-produto",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "x-id",
+										"value": "-88983821"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"preco\": 2222\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/produto/:idproduto",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"produto",
+										":idproduto"
+									],
+									"variable": [
+										{
+											"key": "idproduto",
+											"value": "1",
+											"description": "id do produto que deseja filtrar"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\r\n    \"message\": \"Alteração no produto realizada!\",\r\n    \"content\": {\r\n        \"data\": {\r\n            \"id\": 1,\r\n            \"idcategoria\": 1,\r\n            \"nome\": \"Violão\",\r\n            \"preco\": 2222\r\n        }\r\n    }\r\n}"
+						},
+						{
+							"name": "500-patch-produto",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-id",
+										"value": "-88983821"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idcategoria\": 1,\r\n    \"nome\": \"Violão\",\r\n    \"preco\": 22\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/produto/:idproduto",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"produto",
+										":idproduto"
+									],
+									"variable": [
+										{
+											"key": "idproduto",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\r\n    \"message\": \"Erro interno no servidor da aplicação\"\r\n}"
+						}
+					]
+				},
+				{
+					"name": "delete-produto",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-id",
+								"value": "-88983821"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/produto/:idproduto",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"produto",
+								":idproduto"
+							],
+							"variable": [
+								{
+									"key": "idproduto",
+									"value": null
+								}
+							]
+						},
+						"description": "Lista os registros ou um registro apenas em caso da presença do cabeçalho x-id"
+					},
+					"response": [
+						{
+							"name": "204-delete-produto",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "x-id",
+										"value": "-88983821"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/produto/:idproduto",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"produto",
+										":idproduto"
+									],
+									"variable": [
+										{
+											"key": "idproduto",
+											"value": "2",
+											"description": "id do produto que deseja deletar"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\r\n    \"message\": \"Produto deletado com sucesso!\"\r\n}"
+						},
+						{
+							"name": "404-delete-produto",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "x-id",
+										"value": "-88983821"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/produto/:idproduto",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"produto",
+										":idproduto"
+									],
+									"variable": [
+										{
+											"key": "idproduto",
+											"value": "2",
+											"description": "id do produto que deseja deletar"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\r\n    \"message\": \"Produto não encontrado!\"\r\n}"
+						},
+						{
+							"name": "401-delete-produto",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "x-id",
+										"value": "-88983821"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/produto/:idproduto",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"produto",
+										":idproduto"
+									],
+									"variable": [
+										{
+											"key": "idproduto",
+											"value": "2",
+											"description": "id do produto que deseja deletar"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\r\n    \"message\": \"Não Autorizado\"\r\n}"
+						},
+						{
+							"name": "500-delete-produto",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "x-id",
+										"value": "-88983821"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/produto/:idproduto",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"produto",
+										":idproduto"
+									],
+									"variable": [
+										{
+											"key": "idproduto",
+											"value": "2",
+											"description": "id do produto que deseja deletar"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\r\n    \"message\": \"Erro interno no servidor da aplicação\"\r\n}"
+						}
+					]
+				},
+				{
+					"name": "get-produto-by-id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-id",
+								"value": "-88983821"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/produto/:idproduto",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"produto",
+								":idproduto"
+							],
+							"variable": [
+								{
+									"key": "idproduto",
+									"value": null
+								}
+							]
+						},
+						"description": "Lista os registros ou um registro apenas em caso da presença do cabeçalho x-id"
+					},
+					"response": [
+						{
+							"name": "200-get-produto-by-id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-id",
+										"value": "-88983821"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/produto/:idproduto",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"produto",
+										":idproduto"
+									],
+									"variable": [
+										{
+											"key": "idproduto",
+											"value": "1",
+											"description": "id do produto que deseja buscar"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\r\n    \"data\":\r\n    {\r\n        \"id\": 1,\r\n        \"idcategoria\": 1,\r\n        \"nome\": \"Violão\",\r\n        \"preco\": 22\r\n    }\r\n}"
+						},
+						{
+							"name": "417-get-produto",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-id",
+										"value": "-88983821"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/produto/:idproduto",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"produto",
+										":idproduto"
+									],
+									"variable": [
+										{
+											"key": "idproduto",
+											"value": "123123"
+										}
+									]
+								}
+							},
+							"status": "Expectation Failed",
+							"code": 417,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": "{\r\n    \"message\": \"Algum parâmetro está incorreto\"\r\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Categoria",
+			"item": [
+				{
+					"name": "get-categorias",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-id",
+								"value": "-88983821"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/categorias",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"categorias"
+							]
+						},
+						"description": "Lista os registros ou um registro apenas em caso da presença do cabeçalho x-id"
+					},
+					"response": [
+						{
+							"name": "200-get-categorias",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-id",
+										"value": "-88983821"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/categorias",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categorias"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"nome\": \"Instrumentos musicais\"\n        },\n        {\n            \"id\": 2,\n            \"nome\": \"Ferramentas\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "post-categoria",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-id",
+								"value": "-88983821"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Instrumentos Musicais\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/categoria",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"categoria"
+							]
+						},
+						"description": "Lista os registros ou um registro apenas em caso da presença do cabeçalho x-id"
+					},
+					"response": [
+						{
+							"name": "201-post-categoria",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-id",
+										"value": "-88983821"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nome\": \"Instrumentos Musicais\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/categoria",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categoria"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\r\n    \"message\": \"Categoria cadastrada com sucesso!\"\r\n}"
+						}
+					]
+				},
+				{
+					"name": "patch-categoria",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "x-id",
+								"value": "-88983821"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idcategoria\": 1,\r\n    \"nome\": \"Violão\",\r\n    \"preco\": 22\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/categoria/:idcategoria",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"categoria",
+								":idcategoria"
+							],
+							"variable": [
+								{
+									"key": "idcategoria",
+									"value": null
+								}
+							]
+						},
+						"description": "Lista os registros ou um registro apenas em caso da presença do cabeçalho x-id"
+					},
+					"response": [
+						{
+							"name": "200-patch-categoria",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "x-id",
+										"value": "-88983821"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nome\": \"Violão\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/categoria/:idcategoria",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categoria",
+										":idcategoria"
+									],
+									"variable": [
+										{
+											"key": "idcategoria",
+											"value": "1",
+											"description": "id da categoria que deseja filtrar"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Alteração na categoria realizada com sucesso!\",\n    \"content\": {\n        \"data\": {\n            \"id\": 1,\n            \"nome\": \"Instrumentos de musica\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "delete-categoria",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-id",
+								"value": "-88983821"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/categoria/:idcategoria",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"categoria",
+								":idcategoria"
+							],
+							"variable": [
+								{
+									"key": "idcategoria",
+									"value": null
+								}
+							]
+						},
+						"description": "Lista os registros ou um registro apenas em caso da presença do cabeçalho x-id"
+					},
+					"response": [
+						{
+							"name": "204-delete-categoria",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "x-id",
+										"value": "-88983821"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/categoria/:idcategoria",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categoria",
+										":idcategoria"
+									],
+									"variable": [
+										{
+											"key": "idcategoria",
+											"value": "1",
+											"description": "id da categoria que deseja deletar"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Categoria deletada com sucesso!\"\n}"
+						},
+						{
+							"name": "404-delete-categoria",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "x-id",
+										"value": "-88983821"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/categoria/:idcategoria",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categoria",
+										":idcategoria"
+									],
+									"variable": [
+										{
+											"key": "idcategoria",
+											"value": "1",
+											"description": "id da categoria que deseja deletar"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Não foi possivel deletar a categoria!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "get-categoria-by-id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-id",
+								"value": "-88983821"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/categoria/:idcategoria",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"categoria",
+								":idcategoria"
+							],
+							"variable": [
+								{
+									"key": "idcategoria",
+									"value": null
+								}
+							]
+						},
+						"description": "Lista os registros ou um registro apenas em caso da presença do cabeçalho x-id"
+					},
+					"response": [
+						{
+							"name": "200-get-categoria-by-id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-id",
+										"value": "-88983821"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/categoria/:idcategoria",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categoria",
+										":idcategoria"
+									],
+									"variable": [
+										{
+											"key": "idcategoria",
+											"value": "1",
+											"description": "id da categoria que deseja buscar"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\r\n    \"data\":{\r\n        \"id\": 1,\r\n        \"nome\": \"Instrumentos musicais\"\r\n    }\r\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "port",
+			"value": "8088",
+			"type": "any"
+		},
+		{
+			"key": "version",
+			"value": "1",
+			"type": "any"
+		},
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:{{port}}/v{{version}}",
+			"type": "string"
+		}
+	]
+}
